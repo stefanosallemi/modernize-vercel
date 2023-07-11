@@ -3,16 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve && node api/server.js",
-    "build": "ng build && node api/server.js",
-    "watch": "ng build --watch --configuration development && node api/server.js",
-    "test": "ng test && node api/server.js"
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
   },
   "private": true,
-  "engines": {
-    "npm": ">=8.0.0 <9.0.0",
-    "node": ">=16.0.0 <17.0.0"
-  },
   "dependencies": {
     "@angular/animations": "^15.0.0",
     "@angular/cdk": "^15.0.4",
