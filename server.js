@@ -1,4 +1,4 @@
-const express = require('express');
+/* const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const { Pool } = require('pg');
@@ -102,3 +102,4 @@ app.get('/check-username', (req, res) => {
 app.listen(port, () => {
   console.log(`Server ascolta nella porta: ${port}`);
 });
+ */

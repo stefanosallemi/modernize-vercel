@@ -54,11 +54,11 @@ export class AppSideLoginComponent {
     const { uname, password } = this.form.value;
   
     // Controllo dell'esistenza dell'username
-    this.http.get(`${environment.apiUrl}/check-username?uname=${uname}`).subscribe(
+    this.http.get(`${environment.apiUrl}/api/check-username?uname=${uname}`).subscribe(
       (response: any) => {
         if (response.exists) {
           // Effettua il login solo se l'username esiste
-          this.http.post(`${environment.apiUrl}/login`, { uname, password }).subscribe(
+          this.http.post(`${environment.apiUrl}/api/login`, { uname, password }).subscribe(
             (loginResponse: any) => {
               const token = loginResponse.token;
               localStorage.setItem('authToken', token);

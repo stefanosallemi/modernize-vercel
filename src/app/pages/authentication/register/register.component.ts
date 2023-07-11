@@ -62,10 +62,10 @@ export class AppSideRegisterComponent {
 
     const { name, uname, password } = this.form.value;
 
-    this.http.post(`${environment.apiUrl}/register`, { name, uname, password }).subscribe(
+    this.http.post(`${environment.apiUrl}/api/register`, { name, uname, password }).subscribe(
       (response) => {
         console.log('Registration successful');
-        this.router.navigate(['/login']);
+        this.router.navigate(['authentication/login']);
       },
       (error) => {
         console.error('Registration failed');
