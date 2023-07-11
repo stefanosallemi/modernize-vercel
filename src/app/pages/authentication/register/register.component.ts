@@ -101,7 +101,7 @@ export class AppSideRegisterComponent {
     return new Promise((resolve) => {
       const value: string = control.value;
 
-      this.http.get(`${environment.apiUrl}/check-username?uname=${value}`).subscribe(
+      this.http.get(`${environment.apiUrl}/api/check-username?uname=${value}`).subscribe(
         (response: any) => {
           if (response.exists) {
             resolve({ usernameExists: true });

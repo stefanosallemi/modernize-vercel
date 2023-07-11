@@ -31,7 +31,7 @@ function generateAuthToken(uname) {
   return jwt.sign({ uname }, 'your-secret-key', { expiresIn: '1h' });
 }
 
-app.post('/register', (req, res) => {
+app.post('/api/register', (req, res) => {
   const { name, uname, password } = req.body;
 
   const query = 'INSERT INTO users (name, uname, password) VALUES ($1, $2, $3)';
@@ -48,7 +48,7 @@ app.post('/register', (req, res) => {
   });
 });
 
-app.post('/login', (req, res) => {
+app.post('/api/login', (req, res) => {
   const { uname, password } = req.body;
 
   const query = 'SELECT * FROM users WHERE uname = $1 AND password = $2';
@@ -75,11 +75,11 @@ app.post('/login', (req, res) => {
   });
 });
 
-app.post('/logout', (req, res) => {
+app.post('/api/logout', (req, res) => {
   res.redirect(307, '/login');
 });
 
-app.get('/check-username', (req, res) => {
+app.get('/api/check-username', (req, res) => {
   const { uname } = req.query;
 
   const query = 'SELECT COUNT(*) FROM users WHERE uname = $1';
