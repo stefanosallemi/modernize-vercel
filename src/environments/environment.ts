@@ -1,5 +1,5 @@
 export const environment = {
     production: true,
-    apiUrl: 'https://nodejs-serverless-modernize.vercel.app',
+    apiUrl: 'https://modernize-verceli.vercel.app',
   };
   
