@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
 const pool = new Pool({
   user: 'default',
-  host: 'ep-jolly-flower-480505-pooler.eu-central-1.postgres.vercel-storage.com',
+  host: 'ep-jolly-flower-480505-pooler.eu-central-1.postgres.vercel-storage.compostgres://default:1KbqJZdoxP3V@ep-jolly-flower-480505-pooler.eu-central-1.postgres.vercel-storage.com:5432/verceldb?sslmode=require',
   database: 'verceldb',
   password: '1KbqJZdoxP3V',
   port: 5432,
