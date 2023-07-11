@@ -11,10 +11,10 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'modernize-db',
-  password: 'Steff03',
+  user: 'default',
+  host: 'ep-jolly-flower-480505-pooler.eu-central-1.postgres.vercel-storage.com',
+  database: 'verceldb',
+  password: '1KbqJZdoxP3V',
   port: 5432,
 });
 
