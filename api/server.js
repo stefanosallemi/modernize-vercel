@@ -31,6 +31,10 @@ function generateAuthToken(uname) {
   return jwt.sign({ uname }, 'your-secret-key', { expiresIn: '1h' });
 }
 
+app.get('/api', (req, res) => {
+console.log('valid connection')
+});
+
 app.post('/api/register', (req, res) => {
   const { name, uname, password } = req.body;
 
@@ -61,10 +65,10 @@ app.post('/api/login', (req, res) => {
     } else {
       if (result.rows.length === 1) {
         console.log('User credentials verified successfully');
-        
+
         // Genera il token di autenticazione
         const token = generateAuthToken(uname);
-        
+
         res.status(200).json({ message: 'Accesso consentito', token });
       } else {
 
