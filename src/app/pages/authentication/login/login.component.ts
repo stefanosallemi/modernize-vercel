@@ -47,7 +47,7 @@ export class AppSideLoginComponent {
 
   submit() {
     if (this.form.invalid) {
-      console.log("form not valid");
+      console.log("Form non valido");
       return;
     }
   
@@ -62,7 +62,7 @@ export class AppSideLoginComponent {
             (loginResponse: any) => {
               const token = loginResponse.token;
               localStorage.setItem('authToken', token);
-              console.log('Login successful');
+              console.log('Login avvenuto con successo!');
               this.router.navigate(['/dashboard']);
             },
             (error) => {
@@ -76,7 +76,7 @@ export class AppSideLoginComponent {
         }
       },
       (error) => {
-        console.error('Error occurred while checking username existence');
+        console.error("Si è verificato un errore durante il controllo dell'esistenza del nome utente");
       }
     );
   }

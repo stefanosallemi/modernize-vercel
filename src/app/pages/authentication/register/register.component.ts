@@ -56,7 +56,7 @@ export class AppSideRegisterComponent {
 
   submit() {
     if (this.form.invalid) {
-      console.log("form not valid");
+      console.log("Form non valido");
       return;
     }
 
@@ -64,11 +64,11 @@ export class AppSideRegisterComponent {
 
     this.http.post(`${environment.apiUrl}/api/register`, { name, uname, password }).subscribe(
       (response) => {
-        console.log('Registration successful');
+        console.log('Registrazione avvenuta con successo!');
         this.router.navigate(['authentication/login']);
       },
       (error) => {
-        console.error('Registration failed');
+        console.error('Registrazione Fallita!');
       }
     );
   }
@@ -101,7 +101,7 @@ export class AppSideRegisterComponent {
     return new Promise((resolve) => {
       const value: string = control.value;
 
-      this.http.get(`${environment.apiUrl}/check-username?uname=${value}`).subscribe(
+      this.http.get(`${environment.apiUrl}/api/check-username?uname=${value}`).subscribe(
         (response: any) => {
           if (response.exists) {
             resolve({ usernameExists: true });
@@ -110,7 +110,7 @@ export class AppSideRegisterComponent {
           }
         },
         (error) => {
-          console.error('Error occurred while checking username existence');
+          console.error("Si è verificato un errore durante il controllo dell'esistenza del nome utente");
           resolve(null);
         }
       );
