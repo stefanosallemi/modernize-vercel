@@ -65,7 +65,7 @@ export class AppSideRegisterComponent {
     this.http.post(`${environment.apiUrl}/api/register`, { name, uname, password }).subscribe(
       (response) => {
         console.log('Registrazione avvenuta con successo!');
-        this.router.navigate(['auth/login']);
+        this.router.navigate(['authentication/login']);
       },
       (error) => {
         console.error('Registrazione Fallita!');

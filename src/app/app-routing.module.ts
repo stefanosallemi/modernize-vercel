@@ -41,7 +41,7 @@ const routes: Routes = [
       {
         path: 'authentication',
         loadChildren: () =>
-          import('./pages/auth/authentication.module').then(
+          import('./pages/authentication/authentication.module').then(
             (m) => m.AuthenticationModule
           ),
       },
