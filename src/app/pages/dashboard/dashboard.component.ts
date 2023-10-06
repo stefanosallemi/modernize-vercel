@@ -312,7 +312,7 @@ export class AppDashboardComponent {
 
     // yearly breakup chart
     this.yearlyChart = {
-      series: [38, 40, 25],
+      series: [60, 11, 20],
 
       chart: {
         type: 'donut',
